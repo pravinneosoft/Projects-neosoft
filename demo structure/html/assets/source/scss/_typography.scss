@@ -1,0 +1,28 @@
+@font-face {
+    font-family: $primary-font;
+    src: url('#{$fonts-path}//montserrat/Montserrat-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: $primary-font;
+    src:url('#{$fonts-path}/montserrat/Montserrat-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: $primary-font;
+    src:url('#{$fonts-path}/montserrat/Montserrat-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: $primary-font;
+    src:url('#{$fonts-path}/montserrat/Montserrat-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}

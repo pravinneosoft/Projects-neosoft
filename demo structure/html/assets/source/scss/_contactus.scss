@@ -1,0 +1,485 @@
+.signup {
+    @include media-breakpoint-up(lg) {
+        max-width: 100%;
+        height: 100vh;
+        display: flex;
+    }
+
+    @include media-breakpoint-up(md) {
+        display: block;
+    }
+
+
+    &__images {
+        @include media-breakpoint-up(lg) {
+            display: block;
+        }
+
+        @include media-breakpoint-up(sm) {
+            display: none;
+        }
+
+        @include media-breakpoint-up(xs) {
+            display: none;
+        }
+    }
+
+    &__left {
+        width: 38.6%;
+        background-color: purple;
+        position: relative;
+        height: 100%;
+
+        @include media-breakpoint-up(lg) {
+            width: 38.6%;
+        }
+
+        @include media-breakpoint-up(sm) {
+            width: 100%;
+        }
+
+        @include media-breakpoint-up(xs) {
+            width: 100%;
+        }
+    }
+
+
+    &__left &__images div {
+        position: absolute;
+
+        &:first-child {
+            transform: rotate(24deg);
+            left: -179px;
+        }
+
+        &:nth-child(2) {
+            bottom: -32px;
+            left: -50px;
+            z-index: 1;
+        }
+
+        &:nth-child(3) {
+            left: -149px;
+            top: 126px;
+            transform: rotate(50deg);
+        }
+
+        &:nth-child(4) {
+            bottom: -95px;
+            transform: rotate(37deg);
+        }
+
+        &:nth-child(5) {
+            bottom: 0;
+            left: -48px;
+        }
+
+        &:nth-child(6) {
+            top: 132px;
+            right: o;
+            left: 135px;
+            transform: rotate(180deg);
+        }
+
+        &:nth-child(7) {
+            bottom: 0;
+            right: 28px;
+        }
+    }
+
+    &__content {
+        padding: 56px 0 0 160px;
+
+        @include media-breakpoint-up(lg) {
+            padding: 56px 0 0 160px;
+            width: 80%;
+            text-align: unset;
+        }
+
+        @include media-breakpoint-up(sm) {
+            padding: 18px;
+            text-align: center;
+            width: 100%;
+
+        }
+
+        @include media-breakpoint-up(xs) {
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+        }
+
+        &-logo {
+            width: 109px;
+
+            @include media-breakpoint-up(lg) {
+                width: 109px;
+            }
+
+            @include media-breakpoint-up(sm) {
+                width: 190px;
+            }
+
+            @include media-breakpoint-up(xs) {
+                width: 150px;
+            }
+        }
+    }
+
+
+
+    &__content-heading {
+        font-size: 24px;
+        font-weight: 700;
+        color: $color-light;
+        margin-top: 43px;
+
+        @include media-breakpoint-up(lg) {
+            margin-top: 43px;
+        }
+
+        @include media-breakpoint-up(sm) {
+            margin-top: 15px;
+        }
+
+        @include media-breakpoint-up(xs) {
+            margin-top: 10px;
+        }
+    }
+
+    &__right {
+        width: 61.6%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        @include media-breakpoint-up(lg) {
+            width: 61.6%;
+        }
+
+        @include media-breakpoint-up(sm) {
+            width: 100%;
+        }
+
+        @include media-breakpoint-up(xs) {
+            width: 100%;
+        }
+    }
+}
+
+// form css start 
+.signupform {
+    height: auto;
+    margin-top: 115px;
+
+    @include media-breakpoint-up(lg) {
+        width: 476px;
+    }
+
+    @include media-breakpoint-up(md) {
+        width: 700px;
+
+    }
+
+    @include media-breakpoint-up(sm) {
+        width: 525px;
+
+    }
+
+    @include media-breakpoint-up(xs) {
+        width: 100%;
+        padding: 0 30px;
+    }
+
+    &__title {
+        font-size: 16px;
+        font-weight: 600;
+        color: $color-purple;
+        position: absolute;
+        top: 62px;
+    
+        margin-bottom: 35px;
+        @include media-breakpoint-up(md) {
+            right: 162px;
+    
+        }
+    
+        @include media-breakpoint-up(sm) {
+            right: 90px;
+    
+        }
+    
+        @include media-breakpoint-up(xs) {
+            right: 52px;
+        }
+    }
+
+    &__link {
+        color: $secondary-color;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    &__facebook {
+        width: 56px;
+        height: 56px;
+        background-color: $color-whitesmoke;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 16px;
+
+        @include media-breakpoint-up(sm) {
+            margin-top: 0;
+        }
+
+        @include media-breakpoint-up(xs) {
+            margin-top: 25px;
+        }
+
+        &-icon {
+            color: $color-grey;
+            font-size: 22px;
+        }
+    }
+
+    &__heading {
+        color: $color-black;
+        font-weight: 700;
+        font-size: 24px;
+        margin-bottom: 21px;
+    }
+
+    &__hr {
+        color: $color-lightdark;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        position: relative;
+        margin: 31px 0;
+
+        &::before {
+            content: '';
+            width: 183px;
+            border: 0.5px solid $color-light-sky;
+            position: absolute;
+            top: 8px;
+            left: 12px;
+
+            @include media-breakpoint-up(lg) {
+                width: 183px;
+            }
+
+            @include media-breakpoint-up(md) {
+                width: 300px;
+            }
+
+            @include media-breakpoint-up(sm) {
+                width: 183px;
+            }
+
+            @include media-breakpoint-up(sm) {
+                width: 150px;
+            }
+        }
+
+        &::after {
+            content: '';
+            width: 183px;
+            border: 0.5px solid $color-light-sky;
+            position: absolute;
+            top: 8px;
+            right: 12px;
+
+            @include media-breakpoint-up(lg) {
+                width: 183px;
+            }
+
+            @include media-breakpoint-up(md) {
+                width: 300px;
+            }
+
+            @include media-breakpoint-up(sm) {
+                width: 183px;
+            }
+
+            @include media-breakpoint-up(sm) {
+                width: 150px;
+            }
+        }
+    }
+
+
+
+    &__input {
+        border-radius: 10px;
+        border: 1px solid $color-whitesmoke;
+        position: relative;
+        padding: 25px 0 21px 50px !important;
+        color: $color-black;
+        font-size: 16px;
+        font-weight: 600;
+
+        &-name {
+            border-radius: 10px;
+            border: 1px solid $color-whitesmoke;
+            position: relative;
+            color: $color-black;
+            font-size: 16px;
+            font-weight: 600;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        left: 50px !important;
+    }
+
+    &__icon {
+        position: absolute;
+        top: 18px;
+        left: 15px;
+        color: $color-light-sky;
+        font-size: 16px;
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 344px;
+        height: 56px;
+    }
+}
+
+
+
+// bootstrap5 custum form css start
+
+.form-floating>.form-control,
+.form-floating>.form-select {
+    height: calc(3.1rem + 0px);
+}
+
+.form-floating>label {
+    font-size: 16px;
+    font-weight: 600;
+    color: $color-light-sky;
+}
+
+.form-control {
+    &:focus {
+        border: 1px solid $secondary-color;
+        box-shadow: none;
+    }
+}
+
+
+
+// signupform form css start
+
+.signupform {
+    &__subheading {
+        font-size: 14px;
+        font-weight: 400;
+        color: $color-lightdark;
+    }
+
+    &__prev-icon {
+        font-size: 16px;
+        font-weight: 600;
+        color: $color-light-black;
+        margin-right: 12px;
+    }
+
+    &__showhide {
+        font-size: 14px;
+        font-weight: 600;
+        color: $secondary-color;
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        top: 20px;
+        right: 16px;
+    }
+
+    &__prev {
+        font-size: 16px;
+        font-weight: 600;
+        color: $color-light-black;
+        margin-bottom: 60px;
+
+        .icon-leftarrow {
+            margin-right: 16px;
+        }
+
+        span {
+            transition: all .5s;
+        }
+
+        span:nth-child(0) {
+            transition-delay: 0s;
+
+        }
+
+        span:nth-child(2) {
+            transition-delay: .1s;
+        }
+
+        span:nth-child(3) {
+            transition-delay: .2s;
+        }
+
+        span:nth-child(4) {
+            transition-delay: .3s;
+        }
+
+        span:nth-child(4) {
+            transition-delay: .4s;
+        }
+
+        &:hover {
+            span {
+                font-weight: 500;
+                font-size: 18px;
+            }
+
+            span:nth-child(5) {
+                transition-delay: 0s;
+            }
+
+            span:nth-child(4) {
+                transition-delay: 0.1s;
+            }
+
+            span:nth-child(3) {
+                transition-delay: .2s;
+            }
+
+            span:nth-child(2) {
+                transition-delay: .3s;
+            }
+
+            span:nth-child(1) {
+                transition-delay: .4s;
+            }
+        }
+    }
+}
+
+
+//activateform css start
+
+.activateform {
+    &__title {
+        font-size: 16px;
+        font-weight: 600;
+        color: $color-purple;
+    }
+
+    &__link {
+        color: $secondary-color;
+        font-size: 16px;
+        font-weight: 600;
+    }
+}

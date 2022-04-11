@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Hello</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/screen.css">
+</head>
+
+<body>
+
+    <section class="signup">
+        <section class="signup__left">
+            <div class="signup__images">
+                <div>
+                    <img src="assets/images/signupbg.svg" alt="">
+                </div>
+                <div>
+                    <img src="assets/images/signupshape.svg" alt="">
+                </div>
+                <div>
+                    <img src="assets/images/signupbg.svg" alt="">
+                </div>
+                <div>
+                    <img src="assets/images/signupbg.svg" alt="">
+                </div>
+                <div>
+                    <img src="assets/images/signupbg.png" alt="">
+                </div>
+                <div>
+                    <img src="assets/images/dotted-triangle.svg" alt="">
+                </div>
+                <div>
+                    <img src="assets/images/dotted-triangle.svg" alt="">
+                </div>
+            </div>
+            <div class="signup__content">
+                <a title="#" class="navbar-brand" href="#"><img class="signup__content-logo"
+                        src="assets/images/footer_logo.png" alt=""></a>
+                <h1 class="signup__content-heading">Discover the world's top Events</h1>
+            </div>
+        </section>
+        <section class="signup__right">
+            <div>
+                <h2 class="signupform__title">Already a member? <a href="signin.html" class="signupform__link">Sign
+                        in</a></h2>
+                <form class="signupform" action="signin.html" id="registrationForm" novalidate>
+                    <div class="row">
+                        <h2 class="signupform__heading">Sign Up to BookET</h2>
+                        <div class="col-md-10 col-sm-10">
+                            <a href="#" class="btn btn--signup rounded-pill m-0 ">Sign up with google</a></div>
+                        <div class="col-md-2 col-sm-2 signupform__facebook rounded-pill">
+                            <a title="@" href="#"><span class="icon-facebook signupform__facebook-icon"></span></a>
+                        </div>
+
+                        <p class="signupform__hr">or</p>
+                        <div class="col-md-6 pe-2 mb-3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control signupform__input-name" id="firstName"
+                                    placeholder="name@example.com">
+                                <label for="floatingInput">First Name</label>
+                                <div id="first-name-err"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ps-2 mb-3">
+                            <div class="form-floating">
+                                <input type="textl" class="form-control signupform__input-name" id="lastName"
+                                    placeholder="name@example.com">
+                                <label for="floatingInput">Last Name</label>
+                                <div id="last-name-err"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <div class="form-floating">
+                                <input type="email" class="form-control signupform__input" id="emailAddress"
+                                    placeholder="name@example.com">
+                                <label for="floatingInput" class="signupform__label">Email address</label>
+                                <span class="icon-envelope signupform__icon"></span>
+                                <div id="email-err"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-3">
+                            <div class="form-floating">
+                                <input type="password" class="form-control signupform__input" id="password"
+                                    placeholder="name@example.com">
+                                <label for="floatingInput" class="signupform__label">Password</label>
+                                <span class="icon-padlock signupform__icon"></span>
+                                <div id="password-err"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group footer__btn">
+                                <input type="submit" href="#" class="btn btn--joinus rounded-pill m-0 float-end"
+                                    value="Create Account " />
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <script>
+                // First Name Validation
+                var firstName = document.getElementById("firstName");
+                var firstNameValidation = function () {
+                    firstNameValue = firstName.value.trim();
+                    validFirstName = /^[A-Za-z]+$/;
+                    firstNameErr = document.getElementById('first-name-err');
+
+                    if (firstNameValue == "") {
+                        firstNameErr.innerHTML = "First Name is required";
+
+                    } else if (!validFirstName.test(firstNameValue)) {
+                        firstNameErr.innerHTML = "First Name must be only string without white spaces";
+                    } else {
+                        firstNameErr.innerHTML = "";
+                        return true;
+                    }
+                }
+
+                firstName.oninput = function () {
+                    firstNameValidation();
+                }
+
+                // Last Name Validation
+                var lastName = document.getElementById("lastName");
+                var lastNameValidation = function () {
+                    lastNameValue = lastName.value.trim();
+                    validLastName = /^[A-Za-z]+$/;
+                    lastNameErr = document.getElementById('last-name-err');
+                    if (lastNameValue == "") {
+                        lastNameErr.innerHTML = "Last Name is required";
+
+                    } else if (!validLastName.test(lastNameValue)) {
+                        lastNameErr.innerHTML = "Last Name must be only string without white spaces";
+                    } else {
+                        lastNameErr.innerHTML = "";
+                        return true;
+                    }
+                }
+
+                lastName.oninput = function () {
+                    lastNameValidation();
+                }
+
+                // Email Address Validation
+                var emailAddress = document.getElementById("emailAddress");;
+                var emailAddressValidation = function () {
+                    emailAddressValue = emailAddress.value.trim();
+                    validEmailAddress = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                    emailAddressErr = document.getElementById('email-err');
+
+                    if (emailAddressValue == "") {
+                        emailAddressErr.innerHTML = "Email Address is required";
+
+                    } else if (!validEmailAddress.test(emailAddressValue)) {
+                        emailAddressErr.innerHTML = "Email Addre must be in valid formate with @ symbol";
+                    } else {
+                        emailAddressErr.innerHTML = "";
+                        return true;
+                    }
+                }
+                emailAddress.oninput = function () {
+                    emailAddressValidation();
+                }
+
+                // Password Validation
+                var password = document.getElementById("password");;
+                var passwordValidation = function () {
+                    passwordValue = password.value.trim();
+                    validPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+                    passwordErr = document.getElementById('password-err');
+                    if (passwordValue == "") {
+                        passwordErr.innerHTML = "Password is required";
+                    } else if (!validPassword.test(passwordValue)) {
+                        passwordErr.innerHTML =
+                            "Password must have at least one Uppercase, lowercase, digit, special characters & 8 characters";
+                    } else {
+                        passwordErr.innerHTML = "";
+                        return true;
+                    }
+                }
+                password.oninput = function () {
+                    passwordValidation();
+
+                }
+                // validation on submit
+                document.getElementById("registrationForm").onsubmit = function (e) {
+                    firstNameValidation();
+                    lastNameValidation();
+                    emailAddressValidation();
+                    passwordValidation();
+                   if (firstNameValidation() == true &&
+                        lastNameValidation() == true &&
+                        emailAddressValidation() == true &&
+
+                        passwordValidation() == true) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+            </script>
+</body>
+
+</html>

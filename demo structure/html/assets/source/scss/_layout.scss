@@ -1,0 +1,16 @@
+.container{
+    @include media-breakpoint-up(xs) {
+        max-width: 1252px;
+        padding: 0 40px;
+        margin: 0 auto;}
+    @include media-breakpoint-up(sm) {
+        max-width: 1252px;
+        padding: 0 30px;
+        margin: 0 auto;}
+
+    @include media-breakpoint-up(md) {width: 100%;
+        max-width: 1252px;
+        padding: 0 10px;
+        margin: 0 auto;
+    }
+}

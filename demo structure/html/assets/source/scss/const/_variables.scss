@@ -1,0 +1,85 @@
+/**_variables.scss
+SCSS file for all varibles.
+@file _variables.scss
+@path /assets/scss/_variables.scss
+@version 2019-10-09
+*/
+/* Font family */
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+$base-font: "Roboto", sans-serif;
+$body-bg: #eeeeee;
+
+/* Colors variables */
+$white: #FFFFFF !default;
+$theme-colors: (
+  "primary": #0074d9,
+  "danger": #ff4136
+);
+/* Transition speeds variables */
+$trans-slow: 0.6s;
+$trans-med: 0.4s;
+$trans-fast: 0.2s;
+
+/* Box shadow variables */
+$normal-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
+
+/* Radius variables */
+/* Images path variable */
+$img-path:"../images";
+
+/*@import "node_modules/bootstrap/scss/bootstrap";*/
+
+
+
+
+//colors variables
+
+$primary-color:#502274;
+$secondary-color:#fe7700;
+$color-dark:#2F242C;
+$color-lightdark:#96969B;
+$color-grey:#707070;
+$color-lightgrey:#989898;
+$color-white:#fff;
+$color-black:#2F242C;
+$color-light-black:#231000;
+$color-dark-black:#141415;
+$color-light:#ececec;
+$color-whitesmoke:#eaeaea;
+$color-light-sky:#c8c7cc;
+$color-blue:#4285F4;
+$color-purple:#231000;
+//font path variable
+$fonts-path: "/assets/font" !default;
+$primary-font:"Montserrat";
+
+
+//icomoon icons variable
+$icomoon-font-family: "icomoon" !default;
+$icomoon-font-path: "/assets/font/icomoon" !default;
+
+$icon-apple: "\e900";
+$icon-call: "\e901";
+$icon-close: "\e902";
+$icon-downarrow: "\e903";
+$icon-dropdown: "\e904";
+$icon-envelope: "\e905";
+$icon-event: "\e906";
+$icon-facebook: "\e907";
+$icon-google: "\e908";
+$icon-gridview: "\e909";
+$icon-instagram: "\e90a";
+$icon-leftarrow: "\e90b";
+$icon-like: "\e90c";
+$icon-listview: "\e90d";
+$icon-location: "\e90e";
+$icon-logo: "\e90f";
+$icon-notification: "\e910";
+$icon-padlock: "\e911";
+$icon-rightarrow: "\e912";
+$icon-search: "\e913";
+$icon-share: "\e914";
+$icon-star: "\e915";
+$icon-twitter: "\e916";

@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <!-- Required meta tags -->
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+   <title>:: Welcome to Know Escape ::</title>
+   <!-- Custome CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+   <!-- owlcarousel link tags -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous">
+   <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous" />
+   <link rel="stylesheet" href="assets/css/screen.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous" />
+</head>
+
+<body>
+   <header class="header">
+      <div class="container">
+         <nav class="navbar navbar-expand-lg navbar-light p-0">
+            <a title="navigation-logo" class="navbar-brand" href="javascript:void(0)"><img class="header__logo" src="assets/images/booket-logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+               data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+               aria-label="Toggle navigation">
+               <i class="fa-solid fa-bars header__humbergurg"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav me-auto mb-2 mb-lg-0 ps-4 header__list">
+                  <li class="nav-item">
+                     <input type="text" class="header__input" onfocus="(this.type = 'date')" placeholder="date">
+                     <label class="header__text">I Want to go out</label>
+                  </li>
+                  <li class="nav-item">
+                     <input type="text" class="header__input" onclick="getLocation();" value="Location" placeholder="#"
+                        readonly />
+                     <label class="header__text">My current Location</label>
+                  </li>
+                  <li class="nav-item">
+                     <input type="text" class="header__input" value="Looking for" placeholder="#" />
+                     <label class="header__text">What are u in the mood for?</label>
+                  </li>
+                  <li class="nav-item header__icon">
+                     <input type="text" class="input" placeholder="search here">
+                     <button title="search anything" type="button" class="triger_search"><i
+                           class="icon-search header__icon-search text-white"></i></button>
+                  </li>
+               </ul>
+               <div class="d-flex header__links">
+                  <a title="sign-in here" href="signin.html" class="btn btn--tranceparent">Sign in</a>
+                  <a href="contact.html" title="sign-up here"
+                     class="btn rounded-pill d-flex align-items-center justify-content-center btn--primary">Sign
+                     up</a>
+               </div>
+            </div>
+
+         </nav>
+      </div>
+   </header>
+   <div id="mapholder"></div>
+   <section class="herobaner container">
+      <div class="owl-carousel owl-theme">
+         <div class="item">
+            <img class="item-image" src="assets/images/courosel.png" alt="">
+         </div>
+         <div class="item">
+            <img class="item-image" src="assets/images/courosel.png" alt="">
+         </div>
+         <div class="item">
+            <img class="item-image" src="assets/images/courosel.png" alt="">
+         </div>
+      </div>
+   </section>
+   <section class="container">
+      <div class="topheading row">
+         <h2 class="topheading__text col-md-6 col-sm-6 col">Event Category</h2>
+         <a title="view all card" class="topheading__view col-md-6 col-sm-6 col text-end" href="#">View All</a>
+      </div>
+      <div class="row  flex-wrap eventcardwrapper">
+         <div class="card col-md-2 col-sm-2 eventcard">
+            <a title="card" class="eventcard__hover" href="javascript:void(0)">
+               <div class="card-body p-0 text-white">
+                  <h5 class="card-title eventcard__title">Music</h5>
+                  <p class="eventcard__text">24 Events Nearby.</p>
+                  <a title="Go to next Page" href="javascript:void(0)">
+                     <div
+                        class="rounded-circle d-flex icon-rightarrow align-items-center justify-content-center eventcard__iconbg">
+                     </div>
+                  </a>
+                  <img class="eventcard__img" src="assets/images/music.png" alt="">
+               </div>
+            </a>
+         </div>
+         <div class="card col-md-2 col-sm-2 eventcard">
+            <a title="card" class="eventcard__hover" href="javascript:void(0)">
+               <div class="card-body p-0 text-white">
+                  <h5 class="card-title eventcard__title">Business &
+                     Startups</h5>
+                  <p class="eventcard__text">36 Events Nearby.</p>
+                  <a title="Go to next Page" href="javascript:void(0)">
+                     <div class="rounded-circle d-flex align-items-center justify-content-center eventcard__iconbg ">
+                        <span class="icon-rightarrow eventcard__icon"></span></div>
+                  </a>
+                  <img class="eventcard__img" src="assets/images/business_deal.png" alt="">
+               </div>
+            </a>
+            </a>
+         </div>
+         <div class="card col-md-2 col-sm-2 eventcard">
+            <a title="card" class="eventcard__hover" href="javascript:void(0)">
+               <div class="card-body p-0 text-white">
+                  <h5 class="card-title eventcard__title">Arts & Culture</h5>
+                  <p class="eventcard__text">24 Events Nearby.</p>
+                  <a title="Go to next Page" href="javascript:void(0)">
+                     <div class="rounded-circle d-flex align-items-center justify-content-center eventcard__iconbg ">
+                        <span class="icon-rightarrow eventcard__icon"></span></div>
+                  </a>
+                  <img class="eventcard__img" src="assets/images/arts.png" alt="">
+               </div>
+            </a>
+            </a>
+         </div>
+         <div class="card col-md-2 col-sm-2 eventcard">
+            <a title="card" class="eventcard__hover" href="javascript:void(0)">
+               <div class="card-body p-0 text-white">
+                  <h5 class="card-title eventcard__title">Film & Media</h5>
+                  <p class="eventcard__text">36 Events Nearby.</p>
+                  <a title="Go to next Page" href="javascript:void(0)">
+                     <div class="rounded-circle d-flex align-items-center justify-content-center eventcard__iconbg ">
+                        <span class="icon-rightarrow eventcard__icon"></span></div>
+                  </a>
+                  <img class="eventcard__img" src="assets/images/film.png" alt="">
+               </div>
+            </a>
+         </div>
+         <div class="card col-md-2 col-sm-2 eventcard">
+            <a title="card" class="eventcard__hover" href="javascript:void(0)">
+               <div class="card-body p-0 text-white">
+                  <h5 class="eventcard__title">Food & Drink</h5>
+                  <p class="eventcard__text">24 Events Nearby.</p>
+                  <a title="Go to next Page" href="">
+                     <div class="rounded-circle d-flex align-items-center justify-content-center eventcard__iconbg ">
+                        <span class="icon-rightarrow eventcard__icon"></span></div>
+                  </a>
+                  <img class="eventcard__img" src="assets/images/food&drink.png" alt="">
+               </div>
+            </a>
+         </div>
+      </div>
+   </section>
+   <section class="container">
+      <div class="topheading row">
+         <h2 class="topheading__text col-md-6 col-sm-6 col">Popular Event</h2>
+         <a title="view all card" class="topheading__view col-md-6 col-sm-6 col text-end" href="javascript:void(0)"
+            id="btnMoreLess" onclick="ReadMoreLess()">
+            View All</a>
+      </div>
+      <div class="row flex-wrap popular" id="dots">
+
+         <div class="card col-md-3 col-sm-6 popularcard">
+            <a title="go to next" href="javascript:void(0)">
+               <div class="card-img-top popularcard__foodevent position-relative"></div>
+               <a href="javascript:void(0)" title="like"
+                  class="d-flex align-items-center justify-content-center position-absolute  icon-like rounded-circle popularcard__iconbg">
+               </a>
+            </a>
+            <div class="d-flex  align-items-center">
+               <div class="card-body p-0">
+                  <p class="card-text popularcard__time">Sun, Nov 15, 11:00 AM</p>
+                  <a href="javascript:void(0)" class="">
+                     <h5 class="card-title popularcard__title">Great Qatar Food Festival</h5>
+                  </a>
+                  <p class="card-text"><small class="popularcard__text">Mosman Park, Sydney</small></p>
+               </div>
+               <a title="share" class="popularcard__icon" href="javascript:void(0)"> <span
+                     class="icon-share "></span></a>
+            </div>
+         </div>
+         <div class="card col-md-3  popularcard"><a title="go to next" href="javascript:void(0)">
+               <div class="card-img-top popularcard__boatevent position-relative"></div>
+               <a href="javascript:void(0)" title="like"
+                  class="d-flex align-items-center justify-content-center position-absolute  icon-like rounded-circle popularcard__iconbg">
+               </a>
+            </a>
+            <div class="d-flex  align-items-center">
+               <div class="card-body p-0">
+                  <p class="card-text popularcard__time">Sun, Nov 15, 11:00 AM</p>
+                  <a href="javascript:void(0)">
+                     <h5 class="card-title popularcard__title">QAWARIB Qatar
+                        International Boat
+                        Show 2021</h5>
+                  </a>
+                  <p class="card-text"><small class="popularcard__text">Mosman Park, Sydney</small></p>
+               </div>
+               <a title="share" class="popularcard__icon" href="javascript:void(0)"> <span
+                     class="icon-share "></span></a>
+            </div>
+         </div>
+         <div class="card col-md-3 popularcard"><a title="go to next" href="javascript:void(0)">
+               <div class="card-img-top popularcard__aievent position-relative"></div>
+               <a href="javascript:void(0)" title="like"
+                  class="d-flex align-items-center justify-content-center position-absolute  icon-like rounded-circle popularcard__iconbg">
+               </a>
+            </a>
+            <div class="d-flex  align-items-center">
+               <div class="card-body p-0">
+                  <p class="card-text popularcard__time">Sun, Nov 15, 11:00 AM</p>
+                  <a href="javascript:void(0)">
+                     <h5 class="card-title popularcard__title">Commercial Bank CHI Al
+                        SHAQAB Presented by
+                        Longines</h5>
+                  </a>
+                  <p class="card-text"><small class="popularcard__text">Mosman Park, Sydney</small></p>
+               </div>
+               <a title="share" class="popularcard__icon" href="javascript:void(0)"> <span
+                     class="icon-share "></span></a>
+            </div>
+         </div>
+         <div class="card col-md-3 popularcard"><a title="go to next" href="javascript:void(0)">
+               <div class="card-img-top popularcard__culturalevent position-relative"></div>
+               <a href="javascript:void(0)" title="like"
+                  class="d-flex align-items-center justify-content-center position-absolute  icon-like rounded-circle popularcard__iconbg">
+               </a>
+            </a>
+            <div class="d-flex  align-items-center">
+               <div class="card-body p-0">
+                  <p class="card-text popularcard__time">Sun, Nov 15, 11:00 AM</p>
+                  <a href="javascript:void(0)">
+                     <h5 class="card-title popularcard__title">Tasty Street Qatar at
+                        Katara Cultural Village</h5>
+                  </a>
+                  <p class="card-text"><small class="popularcard__text">Mosman Park, Sydney</small></p>
+               </div>
+               <a title="share" class="popularcard__icon" href="javascript:void(0)"> <span
+                     class="icon-share "></span></a>
+            </div>
+         </div>
+      </div>
+      <div class="row flex-wrap popular" style="display: none;" id="more">
+
+         <div class="card col-md-3 col-sm-6 popularcard"><a title="go to next" href="javascript:void(0)">
+               <div class="card-img-top popularcard__foodevent position-relative"></div>
+               <a href="javascript:void(0)" title="like"
+                  class="d-flex align-items-center justify-content-center position-absolute  icon-like rounded-circle popularcard__iconbg">
+               </a>
+            </a>
+            <div class="d-flex  align-items-center">
+               <div class="card-body p-0">
+                  <p class="card-text popularcard__time">Sun, Nov 15, 11:00 AM</p>
+                  <a href="javascript:void(0)" class="">
+                     <h5 class="card-title popularcard__title">Great Qatar Food Festival</h5>
+                  </a>
+                  <p class="card-text"><small class="popularcard__text">Mosman Park, Sydney</small></p>
+               </div>
+               <a title="share" class="popularcard__icon" href="javascript:void(0)"> <span
+                     class="icon-share "></span></a>
+            </div>
+         </div>
+         <div class="card col-md-3  popularcard"><a title="go to next" href="javascript:void(0)">
+               <div class="card-img-top popularcard__boatevent position-relative"></div>
+               <a href="javascript:void(0)" title="like"
+                  class="d-flex align-items-center justify-content-center position-absolute  icon-like rounded-circle popularcard__iconbg">
+               </a>
+            </a>
+            <div class="d-flex  align-items-center">
+               <div class="card-body p-0">
+                  <p class="card-text popularcard__time">Sun, Nov 15, 11:00 AM</p>
+                  <a href="javascript:void(0)">
+                     <h5 class="card-title popularcard__title">QAWARIB Qatar
+                        International Boat
+                        Show 2021</h5>
+                  </a>
+                  <p class="card-text"><small class="popularcard__text">Mosman Park, Sydney</small></p>
+               </div>
+               <a title="share" class="popularcard__icon" href="javascript:void(0)"> <span
+                     class="icon-share "></span></a>
+            </div>
+         </div>
+         <div class="card col-md-3 popularcard"><a title="go to next" href="javascript:void(0)">
+               <div class="card-img-top popularcard__aievent position-relative"></div>
+               <a href="javascript:void(0)" title="like"
+                  class="d-flex align-items-center justify-content-center position-absolute  icon-like rounded-circle popularcard__iconbg">
+               </a>
+            </a>
+            <div class="d-flex  align-items-center">
+               <div class="card-body p-0">
+                  <p class="card-text popularcard__time">Sun, Nov 15, 11:00 AM</p>
+                  <a href="javascript:void(0)">
+                     <h5 class="card-title popularcard__title">Commercial Bank CHI Al
+                        SHAQAB Presented by
+                        Longines</h5>
+                  </a>
+                  <p class="card-text"><small class="popularcard__text">Mosman Park, Sydney</small></p>
+               </div>
+               <a title="share" class="popularcard__icon" href="javascript:void(0)"> <span
+                     class="icon-share "></span></a>
+            </div>
+         </div>
+         <div class="card col-md-3 popularcard"><a title="go to next" href="javascript:void(0)">
+               <div class="card-img-top popularcard__culturalevent position-relative"></div>
+               <a href="javascript:void(0)" title="like"
+                  class="d-flex align-items-center justify-content-center position-absolute  icon-like rounded-circle popularcard__iconbg">
+               </a>
+            </a>
+            <div class="d-flex  align-items-center">
+               <div class="card-body p-0">
+                  <p class="card-text popularcard__time">Sun, Nov 15, 11:00 AM</p>
+                  <a href="javascript:void(0)">
+                     <h5 class="card-title popularcard__title">Tasty Street Qatar at
+                        Katara Cultural Village</h5>
+                  </a>
+                  <p class="card-text"><small class="popularcard__text">Mosman Park, Sydney</small></p>
+               </div>
+               <a title="share" class="popularcard__icon" href="javascript:void(0)"> <span
+                     class="icon-share "></span></a>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="container">
+      <div class="topheading row">
+         <h2 class="topheading__text col-md-6 col-sm-6 col">Featured Events</h2>
+         <a title="view all card" class="topheading__view col-md-6 col-sm-6 col text-end" id="viewall"
+            href="javascript:void(0)">View
+            All</a>
+      </div>
+      <div class="row flex-wrap popular" id="popularcard">
+         <div class="card col-md-3 popularcard"><a title="go to next" href="javascript:void(0)">
+               <div class="card-img-top popularcard__mussiumevent position-relative"></div>
+               <a href="javascript:void(0)" title="like"
+                  class="d-flex align-items-center justify-content-center position-absolute icon-like rounded-circle featurecard__iconbg">
+               </a>
+            </a>
+            <div class="d-flex  align-items-center">
+               <div class="card-body p-0">
+                  <p class="card-text popularcard__time">Sun, Nov 15, 11:00 AM</p>
+                  <a href="#">
+                     <h5 class="card-title popularcard__title">Qatar Museum Tour</h5>
+                  </a>
+                  <p class="card-text"><small class="popularcard__text"> Doha, Qatar</small></p>
+               </div>
+               <a title="share" class="popularcard__icon" href="#"> <span class="icon-share "></span></a>
+            </div>
+         </div>
+         <div class="card col-md-3 popularcard"><a title="go to next" href="#">
+               <a title="#" href="#" src="assets/images/tourevent.png"
+                  class="card-img-top popularcard__tourevent position-relative"></a>
+               <a href="#" title="like"
+                  class="d-flex align-items-center justify-content-center position-absolute icon-like rounded-circle featurecard__iconbg">
+               </a>
+            </a>
+            <div class="d-flex  align-items-center">
+               <div class="card-body p-0">
+                  <p class="card-text popularcard__time">Sun, Nov 15, 11:00 AM</p>
+                  <a href="#">
+                     <h5 class="card-title popularcard__title">Longines Global
+                        Champions Tour - Doha</h5>
+                  </a>
+                  <p class="card-text"><small class="popularcard__text">Blue Mountains, NSW</small></p>
+               </div>
+               <a title="share" class="popularcard__icon" href="#"> <span class="icon-share "></span></a>
+            </div>
+         </div>
+         <div class="card col-md-3 popularcard"><a title="go to next" href="#">
+               <div src="assets/images/educationevent.png"
+                  class="card-img-top popularcard__educationevent position-relative"></div>
+               <a href="#" title="like"
+                  class="d-flex align-items-center justify-content-center position-absolute icon-like rounded-circle featurecard__iconbg">
+               </a>
+            </a>
+            <div class="d-flex  align-items-center">
+               <div class="card-body p-0">
+                  <p class="card-text popularcard__time">Sun, Nov 15, 11:00 AM</p>
+                  <a href="#">
+                     <h5 class="card-title popularcard__title">Qatar Sports and
+                        Educational Tour</h5>
+                  </a>
+                  <p class="card-text"><small class="popularcard__text">Mosman Park, Sydney</small></p>
+               </div>
+               <a title="share" class="popularcard__icon" href="#"> <span class="icon-share "></span></a>
+            </div>
+         </div>
+         <div class="card col-md-3 popularcard"><a title="go to next" href="#">
+               <div src="assets/images/race-event.png" class="card-img-top popularcard__race-event position-relative">
+               </div>
+               <a href="#" title="like"
+                  class="d-flex align-items-center justify-content-center position-absolute icon-like rounded-circle featurecard__iconbg">
+               </a>
+            </a>
+            <div class="d-flex  align-items-center">
+               <div class="card-body p-0">
+                  <p class="card-text popularcard__time">Sun, Nov 15, 11:00 AM</p>
+                  <a href="#">
+                     <h5 class="card-title popularcard__title"> Shaikh faisal Camal
+                        Race track</h5>
+                  </a>
+                  <p class="card-text"><small class="popularcard__text">Mosman Park, Sydney</small></p>
+               </div>
+               <a title="share" class="popularcard__icon" href="#"> <span class="icon-share "></span></a>
+            </div>
+         </div>
+      </div>
+      <div class="row flex-wrap popular">
+         <div class="card col-md-3 popularcard"><a title="go to next" href="#">
+               <div class="card-img-top popularcard__mussiumevent position-relative"></div>
+               <a href="#" title="like"
+                  class="d-flex align-items-center justify-content-center position-absolute icon-like rounded-circle featurecard__iconbg">
+               </a>
+            </a>
+            <div class="d-flex  align-items-center">
+               <div class="card-body p-0">
+                  <p class="card-text popularcard__time">Sun, Nov 15, 11:00 AM</p>
+                  <a href="#">
+                     <h5 class="card-title popularcard__title">Qatar Museum Tour</h5>
+                  </a>
+                  <p class="card-text"><small class="popularcard__text"> Doha, Qatar</small></p>
+               </div>
+               <a title="share" class="popularcard__icon" href="#"> <span class="icon-share "></span></a>
+            </div>
+         </div>
+         <div class="card col-md-3 popularcard"><a title="go to next" href="#">
+               <a title="#" href="#" src="assets/images/tourevent.png"
+                  class="card-img-top popularcard__tourevent position-relative"></a>
+               <a href="#" title="like"
+                  class="d-flex align-items-center justify-content-center position-absolute icon-like rounded-circle featurecard__iconbg">
+               </a>
+            </a>
+            <div class="d-flex  align-items-center">
+               <div class="card-body p-0">
+                  <p class="card-text popularcard__time">Sun, Nov 15, 11:00 AM</p>
+                  <a href="#">
+                     <h5 class="card-title popularcard__title">Longines Global
+                        Champions Tour - Doha</h5>
+                  </a>
+                  <p class="card-text"><small class="popularcard__text">Blue Mountains, NSW</small></p>
+               </div>
+               <a title="share" class="popularcard__icon" href="#"> <span class="icon-share "></span></a>
+            </div>
+         </div>
+         <div class="card col-md-3 popularcard"><a title="go to next" href="#">
+               <div src="assets/images/educationevent.png"
+                  class="card-img-top popularcard__educationevent position-relative"></div>
+               <a href="#" title="like"
+                  class="d-flex align-items-center justify-content-center position-absolute icon-like rounded-circle featurecard__iconbg">
+               </a>
+            </a>
+            <div class="d-flex  align-items-center">
+               <div class="card-body p-0">
+                  <p class="card-text popularcard__time">Sun, Nov 15, 11:00 AM</p>
+                  <a href="#">
+                     <h5 class="card-title popularcard__title">Qatar Sports and
+                        Educational Tour</h5>
+                  </a>
+                  <p class="card-text"><small class="popularcard__text">Mosman Park, Sydney</small></p>
+               </div>
+               <a title="share" class="popularcard__icon" href="#"> <span class="icon-share "></span></a>
+            </div>
+         </div>
+         <div class="card col-md-3 popularcard"><a title="go to next" href="#">
+               <div src="assets/images/race-event.png" class="card-img-top popularcard__race-event position-relative">
+               </div>
+               <a href="#" title="like"
+                  class="d-flex align-items-center justify-content-center position-absolute icon-like rounded-circle featurecard__iconbg">
+               </a>
+            </a>
+            <div class="d-flex  align-items-center">
+               <div class="card-body p-0">
+                  <p class="card-text popularcard__time">Sun, Nov 15, 11:00 AM</p>
+                  <a href="#">
+                     <h5 class="card-title popularcard__title"> Shaikh faisal Camal
+                        Race track</h5>
+                  </a>
+                  <p class="card-text"><small class="popularcard__text">Mosman Park, Sydney</small></p>
+               </div>
+               <a title="share" class="popularcard__icon" href="#"> <span class="icon-share "></span></a>
+            </div>
+         </div>
+      </div>
+   </section>
+   <section class="book">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-7 col-sm-12 d-flex align-items-center text-white book__content">
+               <div>
+                  <h2 class="book__title">Book your events now</h2>
+                  <p class="book__text">The perfect event booking app for you.</p>
+                  <div class="row mt-2 mx-auto footer__apps gap-2">
+                     <a href="https://www.applications.wiki/get/play-store/"
+                        class="col-md-6 p-0 d-flex align-items-center justify-content-evenly button"> <img
+                           src="assets/images/apple.png" alt="">
+                        <span class="d-inline-block   button__title">
+                           <small class=" d-block button__text">Download on the</small> App Store </span>
+                     </a>
+                     <a href="https://play.google.com/store"
+                        class="col-md-6 p-0 d-flex align-items-center justify-content-evenly button"> <img
+                           src="assets/images/playstore.png" alt="">
+                        <span class="d-inline-block text-left button__title">
+                           <small class="d-block button__text">Get it on the</small> Google Play </span>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-5 col-sm-12 book__iphone">
+               <img class="book__iphone-image" src="assets/images/iphone.png" alt="">
+            </div>
+         </div>
+      </div>
+   </section>
+   <footer class="footer">
+      <div class="container">
+         <div class="row text-white mx-auto">
+            <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4  mx-auto footer__column">
+               <a href="footer__logo"><img class="footer__logo" src="assets/images/footer_logo.png"
+                     alt="footer logo"></a>
+               <p class="footer__title">Are you an event company? </p>
+               <div class="footer__btn">
+                  <a href="activate.html" class="btn btn--joinus rounded-pill">Join
+                     Us</a></div>
+            </div>
+            <div class="col-sm-12 col-md-2 col-lg-2 col-xl-2 mx-auto footer__column">
+               <div>
+                  <h2 class="footer__title">Quick Link</h2>
+                  <ul class="footer__list">
+
+                     <li><a href="javascript:void(0)"> About us</a></li>
+                     <li><a href="javascript:void(0)"> Partener</a></li>
+                     <li><a href="javascript:void(0)"> Contact us</a></li>
+                     <li><a href="javascript:void(0)"> Privacy Policy</a></li>
+                     <li><a href="javascript:void(0)"> Terms of service</a></li>
+                     <li><a href="javascript:void(0)"> Warranty policy</a></li>
+                  </ul>
+               </div>
+            </div>
+            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 mx-auto footer__column">
+               <div>
+                  <h2 class="footer__title">Get in Touch</h2>
+                  <ul class="footer__list footer__list-addres">
+                     <li>
+                        <address><a href="javascript:void(0)"> <span class="icon-location footer__icon"></span>Sherin
+                              Tower 857,
+                              Sydney </a></address>
+                     </li>
+                     <li><a href="javascript:void(0)"> <span
+                              class="icon-envelope footer__icon"></span>info@booket.com</a></li>
+                     <li><a href="javascript:void(0)"> <span class="icon-call footer__icon"></span>+91-9876543210</a>
+                     </li>
+
+                  </ul>
+               </div>
+            </div>
+            <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3 p-0 mx-auto footer__column">
+               <h2 class="footer__title">Follow Us</h2>
+
+               <div class="footer__social d-flex gap-4">
+                  <a title="javascript:void(0)" class="icon-instagram footer__socialicon" href="#"></a>
+                  <a title="javascript:void(0)" class="icon-twitter footer__socialicon" href="#"></a>
+                  <a title="javascript:void(0)" class="icon-facebook footer__socialicon" href="#"></a>
+               </div>
+               <h2 class="footer__title mb-3">Download App</h2>
+
+               <div class="row mt-2 mx-auto footer__apps gap-2">
+                  <a href="https://www.applications.wiki/get/play-store/"
+                     class="col-md-6 p-0 d-flex align-items-center justify-content-evenly button"> <img
+                        src="assets/images/apple.png" alt="">
+                     <span class="d-inline-block   button__title">
+                        <small class=" d-block button__text">Download on the</small> App Store </span>
+                  </a>
+                  <a href="https://play.google.com/store"
+                     class="col-md-6 p-0 d-flex align-items-center justify-content-evenly button"> <img
+                        src="assets/images/playstore.png" alt="">
+                     <span class="d-inline-block text-left button__title">
+                        <small class="d-block button__text">Get it on the</small> Google Play </span>
+                  </a>
+               </div>
+
+            </div>
+         </div>
+      </div>
+   </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="assets/js/scripts.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+   </script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+   </script>
+   <!-- Custome js  -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"></script>
+   <script>
+      $(document).ready(function () {
+         $('.owl-carousel').owlCarousel({
+            loop: true,
+            items: 1,
+            dot: true,
+            margin: 10,
+            nav: true,
+         })
+         $(".owl-prev").html('<span class="owl-icon icon-leftarrow"></span>');
+         $(".owl-next").html('<span class="owl-icon  icon-rightarrow"></span>');
+      });
+   </script>
+   <script type="text/javascript">
+      function showLocation(position) {
+         var latitude = position.coords.latitude;
+         var longitude = position.coords.longitude;
+         var latlongvalue = position.coords.latitude + "," +
+            position.coords.longitude;
+         var img_url = "https://maps.googleapis.com/maps/api/staticmap?center=" + latlongvalue +
+            "&zoom=14&size=400x300&key=AIzaSyAa8HeLH2lQMbPeOiMlM9D1VxZ7pbGQq8o";
+         document.getElementById("mapholder").innerHTML =
+            "<img src='" + img_url + "'>";
+      }
+
+      function errorHandler(err) {
+         if (err.code == 1) {
+            alert("Error: Access is denied!");
+         } else if (err.code == 2) {
+            alert("Error: Position is unavailable!");
+         }
+      }
+
+      function getLocation() {
+         if (navigator.geolocation) {
+            // timeout at 60000 milliseconds (60 seconds)
+            var options = {
+               timeout: 60000
+            };
+            navigator.geolocation.getCurrentPosition(showLocation, errorHandler, options);
+         } else {
+            alert("Sorry, browser does not support geolocation!");
+         }
+      }
+   </script>
+   <script type="text/javascript">
+      const triger_search = document.querySelector('.triger_search');
+      const input = document.querySelector('.input');
+
+      triger_search.addEventListener('click', () => {
+         if (!input.classList.contains('input-open')) {
+            input.classList.add('input-open');
+            triger_search.innerHTML = "<i class='fa-solid fa-xmark'></i>";
+         } else {
+            input.classList.remove('input-open');
+            triger_search.innerHTML = "<i class='fa-solid fa-magnifying-glass'></i>";
+         }
+      })
+
+      function ReadMoreLess() {
+         var dots = document.getElementById("dots");
+         var moreText = document.getElementById("more");
+         if (dots.style.display === "none") {
+            dots.style.display = "flex";
+            moreText.style.display = "none";
+         } else {
+            dots.style.display = "flex";
+            moreText.style.display = "flex";
+         }
+      }
+      $('#viewall').click(function () {
+         $('#popularcard').slideToggle();
+         if ($('#viewall').text() == "Read more") {
+            $(this).text("View More")
+            $("#popularcard").css("display", "flex");
+         } else {
+            $(this).text("View More")
+            $("#popularcard").css("display", "flex");
+         }
+      });
+      $('#viewall2').click(function () {
+         $('#popularcard2').slideToggle();
+         if ($('#viewall2').text() == "Read less") {
+            $(this).text("View More")
+            $("#popularcard").css("display", "flex");
+         } else {
+            $(this).text("View More")
+            $("#popularcard").css("display", "flex");
+         }
+      });
+      // $(document).ready(function () {
+      //    var a = $("a");
+      //    a.click(function (e) {
+
+      //       e.preventDefault();
+
+      //    });
+      // });
+   </script>
+</body>
+
+</html>

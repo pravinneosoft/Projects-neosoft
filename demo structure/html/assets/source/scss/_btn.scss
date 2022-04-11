@@ -1,0 +1,84 @@
+.btn {
+    width: 160px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn--primary {
+    background-color: transparent;
+    font-size: 16px;
+    font-weight: 600;
+    color: $color-white;
+    @include media-breakpoint-up(md) {
+        font-size: 16px;
+    }
+
+    @include media-breakpoint-up(sm) {
+        font-size: 24px;
+    }
+    @include media-breakpoint-up(xs) {
+        font-size: 24px;
+    }
+    &:hover {
+        background-color: $secondary-color;
+        color: $color-white;
+    }
+}
+
+.btn--tranceparent {
+
+    font-weight: 600;
+    color: $color-white;
+    @include media-breakpoint-up(md) {
+        font-size: 16px;
+    }
+
+    @include media-breakpoint-up(sm) {
+        font-size: 24px;
+    }
+    @include media-breakpoint-up(xs) {
+        font-size: 24px;
+    }
+    &:hover {
+        background-color: $secondary-color;
+        color: $color-white;
+        border-radius: 50px;
+    }
+}
+
+.btn--joinus {
+    background-color: $secondary-color;
+    color: $color-white;
+    font-size: 16px;
+    font-weight: 600;
+
+    @include media-breakpoint-up(md) {
+        margin-top: 21px;
+    }
+
+    @include media-breakpoint-up(sm) {
+        margin-top: 15px;
+    }
+
+    &:hover {
+        background-color: $color-white;
+        color: $color-black;
+    }
+}
+
+.btn--signup {
+    background-color: $color-blue;
+    color: $color-white;
+    font-size: 16px;
+    font-weight: 600;
+    width: 344px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(14px);
+}
+
+

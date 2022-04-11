@@ -1,0 +1,62 @@
+address{
+    margin-bottom: 0;
+}
+a{
+    text-decoration: none;
+    color: $color-white;
+    &:hover{
+        text-decoration: none;
+        color: $secondary-color;
+    }
+}
+.topheading {
+    margin-top: 60px;
+    position: relative;
+
+    &__text {
+        color: $color-black;
+        font-size: 24px;
+        font-weight: 600;
+        margin-bottom: 12px;
+    }
+
+    &__view {
+        color: $secondary-color;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    &::after {
+        content: '';
+        height: 4px;
+        width: 48px;
+        border-radius: 4px;
+        background-color: $secondary-color;
+        position: absolute;
+        bottom: 0;
+        left: 15px;
+    }
+}
+.button{
+  background-color: $color-dark-black;
+  width: 144px;
+  height: 41px;
+  border: 1px solid $color-white;
+  border-radius: 6px;
+  padding: 6px;
+&__title{
+    font-size: 18px;
+    font-weight: 650;
+    color: $color-white;
+    text-align: initial;
+}
+&__text{
+    font-size: 8px;
+    font-weight: 450;
+    color: $color-white;
+}
+}
+#first-name-err, #last-name-err, #email-err, #mobile-number-err, #password-err, #confirm-password-err{
+    color:red;
+    font-size:13px;
+  }

@@ -1,0 +1,15 @@
+.navbar-toggler:focus{
+    box-shadow: none;
+    text-decoration: none;
+
+}
+.navbar-light .navbar-toggle{
+    color: $color-white;
+
+}
+.nav-item{
+    position: relative;
+}
+.navbar-brand{
+    margin-right: 40px;
+}
